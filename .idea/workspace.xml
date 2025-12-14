@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c11e4f-b656-4a31-942d-bc27cd89030b" name="Changes" comment="" />
+    <list default="true" id="a1c11e4f-b656-4a31-942d-bc27cd89030b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +24,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/milk-tea-controller/src/main/java/org/JoeyZ/Application.java" root0="FORCE_HIGHLIGHTING" />
@@ -52,6 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.Application.executor": "Run",
     "Spring Boot.MikeTeaControllerApplication.executor": "Run",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -124,7 +131,7 @@
       <workItem from="1765365435588" duration="9683000" />
       <workItem from="1765454402523" duration="9304000" />
       <workItem from="1765629889275" duration="6760000" />
-      <workItem from="1765714118419" duration="9439000" />
+      <workItem from="1765714118419" duration="10254000" />
     </task>
     <servers />
   </component>
