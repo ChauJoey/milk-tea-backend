@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+#database
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb_dev
+    username: root
+    password: ${DB_PASSWORD:changeMe}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.JoeyZ.entity
+
+#log
+logging:
+  level:
+    root: WARN

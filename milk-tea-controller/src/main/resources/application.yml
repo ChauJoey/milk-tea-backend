@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: milk-tea
+
+  profiles:
+    active: dev

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.JoeyZ.mapper.DrinkMapper">
+    <insert id="createDrink">
+
+        insert into mt_drink (name, price, size, sugar_level, ice_level, status, create_time, update_time)
+        values (#{name}, #{price}, #{size}, #{sugarLevel}, #{iceLevel}, #{status}, #{createTime}, #{updateTime})
+    </insert>
+
+    <update id="updateDrink">
+        update mt_drink
+        set name = #{name},
+            price = #{price},
+            size = #{size},
+            sugar_level = #{sugarLevel},
+            ice_level = #{iceLevel},
+            status = #{status},
+            update_time = #{updateTime}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteDrink">
+        delete from mt_drink where id = #{id}
+    </delete>
+
+    <select id="listAllDrinks" resultType="org.JoeyZ.entity.MtDrink">
+        select * from mt_drink where status = 1
+    </select>
+    <select id="getDrinkById" resultType="org.JoeyZ.entity.MtDrink">
+        select * from mt_drink where id = #{id}
+    </select>
+
+
+
+
+</mapper>

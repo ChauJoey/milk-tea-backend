@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.JoeyZ.mapper.OrderItemMapper">
+    <insert id="insertOrderItem" parameterType="org.JoeyZ.entity.MtOrderItem">
+        insert into mt_order_item (order_id, drink_id, quantity, unit_price, size, sugar_level, ice_level)
+        values (#{orderId}, #{drinkId}, #{quantity}, #{unitPrice}, #{size}, #{sugarLevel}, #{iceLevel})
+    </insert>
+
+    <insert id="insertOrderItemBatch" parameterType="java.util.List">
+        insert into mt_order_item (order_id, drink_id, quantity, unit_price, size, sugar_level, ice_level)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (#{item.orderId}, #{item.drinkId}, #{item.quantity}, #{item.unitPrice}, #{item.size}, #{item.sugarLevel}, #{item.iceLevel})
+        </foreach>
+    </insert>
+
+    <select id="getItemsByOrderId" resultType="org.JoeyZ.dto.OrderItemDTO">
+        SELECT
+            oi.id,
+            oi.drink_id      AS drinkId,
+            d.name           AS drinkName,
+            oi.quantity,
+            oi.unit_price    AS unitPrice,
+            oi.size,
+            oi.sugar_level   AS sugarLevel,
+            oi.ice_level     AS iceLevel
+        FROM mt_order_item oi
+        LEFT JOIN mt_drink d ON d.id = oi.drink_id
+        WHERE oi.order_id = #{orderId}
+        ORDER BY oi.id ASC
+    </select>
+</mapper>
