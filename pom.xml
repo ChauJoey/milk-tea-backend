@@ -47,6 +47,13 @@
       <version>8.0.26</version>
     </dependency>
 
+    <!-- MySql Driver-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.26</version>
+    </dependency>
+
     <!-- lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
